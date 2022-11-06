@@ -75,7 +75,20 @@ function getHighestMetascore(movies) {
  *  getAverageIMDBRating(movies);
  *  //> 7.76
  */
-function getAverageIMDBRating() {}
+function getAverageIMDBRating(movies) {
+  if (movies.length === 0) {
+    return 0
+  }
+  let count = 0, sumIMDB = 0;
+  for (let imdbRating in movies) {
+    if (movies.hasOwnProperty(key)) {
+      if (movies[key].hasOwnProperty(imdbRating)) {
+        sumIMDB += movies[key].imdbRating;
+        count += 1;
+      }
+    }
+  }
+}
 
 /**
  * countByRating()
@@ -88,7 +101,7 @@ function getAverageIMDBRating() {}
  *  countByRating(movies);
  *  //> { G: 3, PG: 7 }
  */
-function countByRating() {}
+function countByRating(movies) {}
 
 /**
  * findById()
@@ -104,7 +117,7 @@ function countByRating() {}
       // Toy Story 4
     };
  */
-function findById() {}
+function findById(movies, id) {}
 
 /**
  * filterByGenre()
@@ -126,7 +139,7 @@ function findById() {}
  *  filterByGenre(movies, "Horror")
  *  //> []
  */
-function filterByGenre() {}
+function filterByGenre(movies, year) {}
 
 /**
  * getAllMoviesReleasedAtOrBeforeYear()
@@ -150,7 +163,7 @@ function filterByGenre() {}
       }
     ];
  */
-function getAllMoviesReleasedAtOrBeforeYear() {}
+function getAllMoviesReleasedAtOrBeforeYear(movies) {}
 
 /**
  * getBiggestBoxOfficeMovie()
