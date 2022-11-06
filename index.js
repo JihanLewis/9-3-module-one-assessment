@@ -34,7 +34,7 @@ function getAllMovieTitles(movies) {
     return []
   }
   for (let i = 0; i < movies.length; i++) {
-    if (movies[i].title === "") {
+    if (movies[i].title === String) {
       return [`${movies[i].title}`]
     }
   }
@@ -88,6 +88,7 @@ function getAverageIMDBRating(movies) {
       }
     }
   }
+  let sum = (accumulator, movies) => accumulator + movies.imdbRating
 }
 
 /**
