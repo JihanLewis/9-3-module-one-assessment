@@ -55,7 +55,13 @@ function getHighestMetascore(movies) {
   if (movies.length === 0) {
     return 0
   }
-  
+  let currentHighest = movies[0]
+  for (let i = 1; i < movies.length; i++) {
+    if (movies[i].metascore > currentHighest.metascore) {
+      currentHighest = movies[i].metascore
+    }
+  } return parseInt(currentHighest) 
+  //return currentHighest
 }
 
 /**
